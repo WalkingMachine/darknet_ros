@@ -57,13 +57,12 @@ find_package(catkin REQUIRED
     actionlib
     darknet_ros_msgs
     image_transport
+    wm_frame_to_box
 )
 
 # Enable OPENCV in darknet
 add_definitions(-DOPENCV)
 add_definitions(-O4 -g)
-
-find_package( catkin REQUIRED wm_frame_to_box )
 
 catkin_package(
   INCLUDE_DIRS
