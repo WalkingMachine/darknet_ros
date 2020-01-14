@@ -57,6 +57,7 @@ find_package(catkin REQUIRED
     actionlib
     darknet_ros_msgs
     image_transport
+    sara_msgs
     wm_frame_to_box
 )
 
@@ -78,6 +79,7 @@ catkin_package(
     darknet_ros_msgs
     sara_msgs
     image_transport
+    wm_frame_to_box
   DEPENDS
     Boost
 )
@@ -220,7 +222,7 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 add_dependencies(${PROJECT_NAME}_lib
-  darknet_ros_msgs wm_frame_to_box
+  darknet_ros_msgs wm_frame_to_box sara_msgs
 )
 
 install(TARGETS ${PROJECT_NAME}_lib
