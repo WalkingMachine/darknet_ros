@@ -63,6 +63,8 @@ find_package(catkin REQUIRED
 add_definitions(-DOPENCV)
 add_definitions(-O4 -g)
 
+find_package( catkin REQUIRED wm_frame_to_box )
+
 catkin_package(
   INCLUDE_DIRS
     include
@@ -219,7 +221,7 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 add_dependencies(${PROJECT_NAME}_lib
-  darknet_ros_msgs_generate_messages_cpp
+  darknet_ros_msgs wm_frame_to_box
 )
 
 install(TARGETS ${PROJECT_NAME}_lib
