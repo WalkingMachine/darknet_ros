@@ -11,7 +11,7 @@
 
   <!-- Load parameters -->
   <rosparam command="load" ns="$(arg node_name)" file="$(find darknet_ros)/config/ros.yaml"/>
-  <rosparam command="load" ns="$(arg node_name)" file="$(find darknet_ros)/config/tiny_yolo_voc.yaml"/>
+  <rosparam command="load" ns="$(arg node_name)" file="$(find darknet_ros)/config/robocup2019.yaml"/>
 
 
   <!-- Start darknet and ros wrapper -->

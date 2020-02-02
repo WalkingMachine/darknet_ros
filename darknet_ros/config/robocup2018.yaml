@@ -5,7 +5,7 @@ yolo_model:
   weight_file:
     name: yolo-robocup2018.weights
   threshold:
-    value: 0.2
+    value: 0.1
   detection_classes:
     names:
       - bag
