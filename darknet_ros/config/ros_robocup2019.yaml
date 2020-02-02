@@ -1,0 +1,51 @@
+
+frame_rate: 6
+output_frame: "/map"
+
+subscribers:
+
+  camera_reading:
+    topic: /camera/rgb/image_raw
+    queue_size: 1
+
+  camera_depth_reading:
+    topic: /camera/depth/image_raw
+    queue_size: 1
+
+actions:
+
+  camera_reading:
+    name: /darknet_ros/check_for_objects
+
+publishers:
+
+  object_detector:
+    topic: /darknet_ros/found_object
+    queue_size: 1
+    latch: false
+
+  bounding_boxes2D:
+    topic: /darknet_ros/bounding_boxes2D
+    queue_size: 1
+    latch: false
+
+  bounding_boxes3D:
+    topic: /darknet_ros/bounding_boxes3D
+    queue_size: 1
+    latch: false
+
+  detection_image:
+    topic: /yolo_laptop
+    queue_size: 1
+    latch: false
+
+  camera_sync:
+    enable: true
+    rgb_topic: /darknet_ros/sync/rgb/image
+    depth_topic: /darknet_ros/sync/depth/image
+
+image_view:
+
+  enable_opencv: true
+  wait_key_delay: 1
+  enable_console_output: true

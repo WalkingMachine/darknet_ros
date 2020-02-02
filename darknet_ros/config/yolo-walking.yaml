@@ -1,0 +1,23 @@
+yolo_model:
+
+  config_file:
+    name: yolo-walking.cfg
+  weight_file:
+    name: yolo-walking.weights
+  threshold:
+    value: 0.3
+  detection_classes:
+    names:
+      - umbrella
+      - keyboard
+      - Cupboard
+      - Fork
+      - Spoon
+      - Kitchen knife
+      - Banana
+      - Apple
+      - Peach
+      - Grape
+      - Plate
+      - Bowl
+      - Handbag
